@@ -3,8 +3,8 @@ export const testData = {
     beatriceUser: {
         email: "beatrice.gaskiene@sft.com",
         password: "beatrice",
+        userName: "Beatrice Gaskiene",
     },
-   
 
     errorMessages: {
         lockedOutUserErrorMessage: "Epic sadface: Sorry, this user has been locked out.",

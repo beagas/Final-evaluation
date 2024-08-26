@@ -18,7 +18,7 @@ test.describe("Validate successfull logins", () => {
     userLogin = new UserLogin(page);
   });
   test(`Validate userName login`, async ({ }) => {
-    await userLogin.fillInLogin(testData.beatriceUser.email, testData.beatriceUser.password);
+    await userLogin.fillInLogin(testData.beatriceUser.email, testData.beatriceUser.password, testData.beatriceUser.userName);
   });
 
 });
