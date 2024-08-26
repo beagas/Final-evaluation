@@ -2,6 +2,26 @@ import { test } from "@playwright/test";
 import { UserLogin } from "../pages/user-login-page";
 import { ProductsListPage } from "../pages/products-list-page";
 import { testData } from "../data/testData";
+import { OrdersHistory } from "../pages/orders-history-page";
+
+test.describe("Empty name", async ({ page }) => {
+  let ordersHistory = new OrdersHistory(page);
+  let userLogin
+  test.beforeEach(async ({ page }) => {
+    userLogin = new UserLogin(page);
+    await userLogin.fillInLogin(testData.beatriceUser.email, testData.beatriceUser.password, testData.beatriceUser.userName);
+  });
+
+  test(`open orders history`, async ({}) => {
+    await ordersHistory.goToOrdersHistory();
+  });
+
+
+});
+
+
+
+
 /*
 const validUsers = [
   testData.standardUser,
