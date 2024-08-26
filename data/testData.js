@@ -1,15 +1,21 @@
 export const testData = {
 
-    beatriceUser: {
+    validUser: {
         email: "beatrice.gaskiene@sft.com",
         password: "beatrice",
         userName: "Beatrice Gaskiene",
     },
-
-    defaultSortingOption: "Name (A to Z)",
+    invalidUser: {
+        email: "beatrice.gaskiene@ttt.com",
+        password: "beatrice",
+        userName: "Beatrice Gaskiene",
+    },
 
     locators: {
         subheader: "v-subheader pl-2",
+        loginError: 'h3[data-test="error"]',
+        orderSubmitBtn: ".orders-list-button.v-btn",
+        pop_up: ".v-snack__content",
     },
 
     soup1: {
@@ -28,5 +34,7 @@ export const testData = {
         name: "2nd main dish",
         price: "2.00€",
     },
-
+    errorMessages: {
+        invalidCredentials: "Username or password incorrect",
+    },
 }
