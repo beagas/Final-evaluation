@@ -6,12 +6,12 @@ export class UserLogin {
     this.page = page;
   }
 
-  async fillInLogin(userName, password) {
+  async fillInLogin(email, password, userName) {
     await this.page.goto("https://lunch.devbstaging.com/login-password");
-    await this.page.locator(".email").fill(userName);
-    await this.page.locator('[name="password"]').fill(password);
+    await this.page.getByLabel('email').fill(email);
+    await this.page.getByLabel('password').fill(password);
     await this.page.locator(".v-btn__content").click();
-
+    await expect(this.page.locator(".v-subheader")).toHaveText(userName);
 
     /*
     if (userName === testData.lockedOutUser.name) {
