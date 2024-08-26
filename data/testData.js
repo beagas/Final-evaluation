@@ -14,6 +14,8 @@ export const testData = {
     locators: {
         subheader: "v-subheader pl-2",
         loginError: 'h3[data-test="error"]',
+        orderSubmitBtn: ".orders-list-button.v-btn",
+        pop_up: ".v-snack__content",
     },
 
     soup1: {
