@@ -6,33 +6,27 @@ export const testData = {
         userName: "Beatrice Gaskiene",
     },
 
-<<<<<<< HEAD
-    locators: {
-        selectOption: ".select option",
-        selectContainer: ".select_container",
-        productSorting: ".product_sort_container",
-    },
     defaultSortingOption: "Name (A to Z)",
-=======
-    errorMessages: {
-        
-    },
-    
-    headers: {
-        
-    },
->>>>>>> 83720c2e270aa060e9aacc35260a55a1b393f2e9
 
     locators: {
         subheader: "v-subheader pl-2",
     },
 
-
-
-
-
-
-
-
+    soup1: {
+        name: "1st soup",
+        price: "1.00€",
+    },
+    soup2: {
+        name: "2nd soup",
+        price: "10.00€",
+    },
+    mainDish1: {
+        name: "1st main dish",
+        price: "0.10€",
+    },
+    mainDish2: {
+        name: "2nd main dish",
+        price: "2.00€",
+    },
 
 }
