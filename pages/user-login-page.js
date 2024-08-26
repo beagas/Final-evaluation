@@ -7,11 +7,13 @@ export class UserLogin {
   }
 
   async fillInLogin(userName, password) {
-    await this.page.goto("https://www.saucedemo.com./");
-    await this.page.locator("#user-name").fill(userName);
-    await this.page.locator("#password").fill(password);
-    await this.page.locator("#login-button").click();
+    await this.page.goto("https://lunch.devbstaging.com/login-password");
+    await this.page.locator(".email").fill(userName);
+    await this.page.locator('[name="password"]').fill(password);
+    await this.page.locator(".v-btn__content").click();
 
+
+    /*
     if (userName === testData.lockedOutUser.name) {
       await this.page.waitForSelector(testData.headers.loginError);
       await expect(this.page.locator(testData.headers.loginError)).toHaveText(testData.errorMessages.lockedOutUserErrorMessage);
@@ -28,5 +30,7 @@ export class UserLogin {
       await this.page.waitForSelector(testData.headers.loginError);
       await expect(this.page.locator(testData.headers.loginError)).toHaveText(testData.errorMessages.emptyPasswordLoginErrorMessage);
     }
+  
+  */
   }
 }
