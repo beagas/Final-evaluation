@@ -1,49 +1,11 @@
 export const testData = {
 
-    standardUser: {
-        name: "standard_user",
-        password: "secret_sauce",
+    beatriceUser: {
+        email: "beatrice.gaskiene@sft.com",
+        password: "beatrice",
     },
-    lockedOutUser: {
-        name: "locked_out_user",
-        password: "secret_sauce",
-    },
-    problemUser: {
-        name: "problem_user",
-        password: "secret_sauce",
-    },
-    performanceGlitchUser: {
-        name: "performance_glitch_user",
-        password: "secret_sauce",
-    },
-    errorUser: {
-        name: "error_user",
-        password: "secret_sauce",
-    },
-    visualUser: {
-        name: "visual_user",
-        password: "secret_sauce",
-    },
-    invalidUser: {
-        title: "invalid_user",
-        name: "invalid_user",
-        password: "secret_sauce",
-    },
-    emptyUser: {
-        title: "empty_user",
-        name: "",
-        password: "",
-    },
-    emptyPassword: {
-        title: "empty_password",
-        name: "standard_user",
-        password: "",
-    },
-    emptyUsername: {
-        title: "empty_username",
-        name: "",
-        password: "secret_sauce",
-    },
+   
+
     errorMessages: {
         lockedOutUserErrorMessage: "Epic sadface: Sorry, this user has been locked out.",
         loginErrorMessage: "Epic sadface: Username and password do not match any user in this service",

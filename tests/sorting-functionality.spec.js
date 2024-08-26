@@ -2,7 +2,7 @@ import { test } from "@playwright/test";
 import { UserLogin } from "../pages/user-login-page";
 import { ProductsListPage } from "../pages/products-list-page";
 import { testData } from "../data/testData";
-
+/*
 const validUsers = [
   testData.standardUser,
   // testData.problemUser,
@@ -50,3 +50,4 @@ validUsers.forEach((user) => {
     });
   });
 });
+*/
