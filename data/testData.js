@@ -6,21 +6,29 @@ export const testData = {
         userName: "Beatrice Gaskiene",
     },
 
+<<<<<<< HEAD
     locators: {
         selectOption: ".select option",
         selectContainer: ".select_container",
         productSorting: ".product_sort_container",
     },
     defaultSortingOption: "Name (A to Z)",
+=======
+    errorMessages: {
+        
+    },
+    
+    headers: {
+        
+    },
+>>>>>>> 83720c2e270aa060e9aacc35260a55a1b393f2e9
 
-    productName: {
-        backpack: "Sauce Labs Backpack",
-        light: "Sauce Labs Bike Light",
-        shirt: "Sauce Labs Bolt T-Shirt",
-        jacket: "Sauce Labs Fleece Jacket",
-        onesie: "Sauce Labs Onesie",
-        redShirt: "Test.allTheThings() T-Shirt (Red)",
-    }
+    locators: {
+        subheader: "v-subheader pl-2",
+    },
+
+
+
 
 
 
