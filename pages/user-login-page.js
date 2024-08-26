@@ -15,5 +15,14 @@ export class UserLogin {
     await this.page.waitForSelector(".v-subheader");
     await expect(this.page.locator(".v-subheader")).toHaveText(userName);
 
+    if (email === testData.beatriceUser.email) {
+      await this.page.waitForSelector(".v-subheader");
+      await expect(this.page.locator(".v-subheader")).toHaveText(userName);
+    } else if (email === testData.invalidUser.email) {
+      await this.page.waitForSelector(testData.selectors.loginError);
+      await expect(this.page.locator(testData.selectors.loginError)).toHaveText(testData.errorMessages.invalidCredentials);
+
+
+    }
   }
 }

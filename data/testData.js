@@ -5,6 +5,11 @@ export const testData = {
         password: "beatrice",
         userName: "Beatrice Gaskiene",
     },
+    invalidUser: {
+        email: "beatrice.gaskiene@ttt.com",
+        password: "beatrice",
+        userName: "Beatrice Gaskiene",
+    },
 
     defaultSortingOption: "Name (A to Z)",
 
@@ -28,5 +33,10 @@ export const testData = {
         name: "2nd main dish",
         price: "2.00€",
     },
-
+    errorMessages: {
+        invalidCredentials: "Username or password incorrect",
+    },
+    selectors: {
+        loginError: 'h3[data-test="error"]',
+    },
 }

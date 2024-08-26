@@ -1,6 +1,5 @@
 import { test } from "@playwright/test";
 import { UserLogin } from "../pages/user-login-page";
-import { ProductsListPage } from "../pages/products-list-page";
 import { testData } from "../data/testData";
 import { OrdersHistory } from "../pages/orders-history-page";
 
@@ -14,9 +13,9 @@ test.describe("Empty name", async () => {
     await userLogin.fillInLogin(testData.beatriceUser.email, testData.beatriceUser.password, testData.beatriceUser.userName);
   });
 
-  test(`open orders history`, async ({page}) => {
+  test(`open orders history`, async () => {
     await ordersHistory.goToOrdersHistory();
-  test(`Order History contains item ${testData.soup1.name}`, async ({ }) => {
+  test(`Order History contains item ${testData.soup1.name}`, async () => {
     await ordersHistory.goTo();
     ordersHistory.findInTable(testData.soup1.name);
   });
