@@ -10,16 +10,16 @@ let userLogin;
 test.beforeEach(async ({ page }) => {
     orderMain = new OrderMain(page);
     userLogin = new UserLogin(page);
-    await userLogin.fillInLogin(testData.beatriceUser.email, testData.beatriceUser.password, testData.beatriceUser.userName);
+    await userLogin.fillInLogin(testData.validUser.email, testData.validUser.password, testData.validUser.userName);
 });
 
 
 test.describe("Validate orders", () => {
 
-    test("Submit order", async () => {
+    test("Submit order and validate it", async ({ page }) => {
         await orderMain.goto();
-        await orderMain.chooseDish(testData.soup1.name);
-        await orderMain.chooseDish(testData.main1.name);
+        await orderMain.chooseDish(testData.soup2.name);
+        await orderMain.chooseDish(testData.mainDish2.name);
         await orderMain.clickOrderSubmit(testData.locators.orderSubmitBtn,
             testData.locators.pop_up);
 
