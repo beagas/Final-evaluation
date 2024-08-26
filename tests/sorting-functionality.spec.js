@@ -4,15 +4,17 @@ import { ProductsListPage } from "../pages/products-list-page";
 import { testData } from "../data/testData";
 import { OrdersHistory } from "../pages/orders-history-page";
 
-test.describe("Empty name", async ({ page }) => {
-  let ordersHistory = new OrdersHistory(page);
-  let userLogin
+test.describe("Empty name", async () => {
+  let ordersHistory;
+  let userLogin;
+  
   test.beforeEach(async ({ page }) => {
+    ordersHistory = new OrdersHistory(page);
     userLogin = new UserLogin(page);
     await userLogin.fillInLogin(testData.beatriceUser.email, testData.beatriceUser.password, testData.beatriceUser.userName);
   });
 
-  test(`open orders history`, async ({}) => {
+  test(`open orders history`, async ({page}) => {
     await ordersHistory.goToOrdersHistory();
   });
 
