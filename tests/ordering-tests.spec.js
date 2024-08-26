@@ -10,7 +10,7 @@ let userLogin;
 test.beforeEach(async ({ page }) => {
     orderMain = new OrderMain(page);
     userLogin = new UserLogin(page);
-    await userLogin.fillInLogin(testData.beatriceUser.email, testData.beatriceUser.password, testData.beatriceUser.userName);
+    await userLogin.fillInLogin(testData.validUser.email, testData.validUser.password, testData.validUser.userName);
 });
 
 

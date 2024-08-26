@@ -13,7 +13,7 @@ test.describe("Order history", async () => {
     ordersHistory = new OrdersHistory(page);
     userLogin = new UserLogin(page);
     orderMain = new OrderMain(page);
-    await userLogin.fillInLogin(testData.beatriceUser.email, testData.beatriceUser.password, testData.beatriceUser.userName);
+    await userLogin.fillInLogin(testData.validUser.email, testData.validUser.password, testData.validUser.userName);
   });
 
  
