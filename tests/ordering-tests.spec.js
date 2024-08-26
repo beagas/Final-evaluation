@@ -16,10 +16,10 @@ test.beforeEach(async ({page}) => {
 
 test.describe("Validate orders", () => {
 
-    test("Submit order", async ({ page }) => {
+    test("Submit order and validate it", async ({ page }) => {
         await orderMain.goto();
-        await orderMain.chooseDish(testData.itemName.soup1);
-        await orderMain.chooseDish(testData.itemName.main1);
+        await orderMain.chooseDish(testData.soup2.name);
+        await orderMain.chooseDish(testData.mainDish2.name);
         await orderMain.clickOrderSubmit(testData.locators.orderSubmitBtn,
              testData.locators.pop_up);
 
