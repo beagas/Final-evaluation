@@ -15,12 +15,12 @@ export class UserLogin {
     await this.page.waitForSelector(".v-subheader");
     await expect(this.page.locator(".v-subheader")).toHaveText(userName);
 
-    if (email === testData.beatriceUser.email) {
+    if (email === testData.validUser.email) {
       await this.page.waitForSelector(".v-subheader");
       await expect(this.page.locator(".v-subheader")).toHaveText(userName);
     } else if (email === testData.invalidUser.email) {
-      await this.page.waitForSelector(testData.selectors.loginError);
-      await expect(this.page.locator(testData.selectors.loginError)).toHaveText(testData.errorMessages.invalidCredentials);
+      await this.page.waitForSelector(testData.locators.loginError);
+      await expect(this.page.locator(testData.locators.loginError)).toHaveText(testData.errorMessages.invalidCredentials);
 
 
     }

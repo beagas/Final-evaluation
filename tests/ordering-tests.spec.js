@@ -7,7 +7,7 @@ import { testData } from "../data/testData";
 let orderMain;
 let userLogin;
 
-test.beforeEach(async ({page}) => {
+test.beforeEach(async ({ page }) => {
     orderMain = new OrderMain(page);
     userLogin = new UserLogin(page);
     await userLogin.fillInLogin(testData.beatriceUser.email, testData.beatriceUser.password, testData.beatriceUser.userName);
@@ -16,14 +16,13 @@ test.beforeEach(async ({page}) => {
 
 test.describe("Validate orders", () => {
 
-    test("Submit order", async ({ page }) => {
+    test("Submit order", async () => {
         await orderMain.goto();
-        await orderMain.chooseDish(testData.itemName.soup1);
-        await orderMain.chooseDish(testData.itemName.main1);
+        await orderMain.chooseDish(testData.soup1.name);
+        await orderMain.chooseDish(testData.main1.name);
         await orderMain.clickOrderSubmit(testData.locators.orderSubmitBtn,
-             testData.locators.pop_up);
+            testData.locators.pop_up);
 
     });
-  
+
 });
-  

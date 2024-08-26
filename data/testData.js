@@ -1,6 +1,6 @@
 export const testData = {
 
-    beatriceUser: {
+    validUser: {
         email: "beatrice.gaskiene@sft.com",
         password: "beatrice",
         userName: "Beatrice Gaskiene",
@@ -11,10 +11,9 @@ export const testData = {
         userName: "Beatrice Gaskiene",
     },
 
-    defaultSortingOption: "Name (A to Z)",
-
     locators: {
         subheader: "v-subheader pl-2",
+        loginError: 'h3[data-test="error"]',
     },
 
     soup1: {
@@ -35,8 +34,5 @@ export const testData = {
     },
     errorMessages: {
         invalidCredentials: "Username or password incorrect",
-    },
-    selectors: {
-        loginError: 'h3[data-test="error"]',
     },
 }
